@@ -1,12 +1,21 @@
 {
   "name": "ng2-google-analytics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Vinay Kumar",
     "email": "kumarvinay5.com@gmail.com",
     "url": "https://kumarvinay.com"
   },
   "license": "MIT",
+  "description": "Google Analytics Angular 2 plugin for trackng pages and events",
+  "keywords": [
+    "Google Analytics",
+    "Ng 2 Angular Google Analytics",
+    "Ionic Analytics",
+    "Angular Analytics",
+    "Ionic Google Analytics",
+    "Angular Google Analytics"
+  ],
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
