@@ -1,27 +1,68 @@
-# MyWorkspaceNew
+# AngularGoogleAnalytics
+## Add Google Analytics to your Angular2+ or Ionic2+ projects
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
+1. Easy installation
+2. Angular 2+ and Ionic 2+ compatible
+3. Track traditional Ionic 2 Pages with no URL Change (use setPage(pageName) function )
+4. Track Custom Events with trackEvent function
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## steps to integrate
 
-## Code scaffolding
+### Add AngularGoogleAnalytics in app.module.ts
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```javascript
+imports: [
+   ...,
+   ...,
+   AngularGoogleAnalyticsModule
+  ],
+```
 
-## Build
+### initialize AngularGoogleAnalytics
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```javascript
+// add AngularGoogleAnalyticsService in app.component.ts
+import {AngularGoogleAnalyticsService} from 'angular-google-analytics';
 
-## Running unit tests
+// add in constructor
+constructor(
+    public ga: AngularGoogleAnalyticsService
+    ...
+  ) {
+    //initialize service with your GA Token
+    ga.initialize('UA-XXXXXXX-1');
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  }
+```
 
-## Running end-to-end tests
+### call setPage(pageName) function to track pages
+```javascript
+// add in constructor
+constructor(
+    public ga: AngularGoogleAnalyticsService
+    ...
+  ) {
+  }
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+ ngOnInit() {
+   this.ga.setPage('register.html');
+ }
+```
 
-## Further help
+### call trackEvent() function to track events
+```javascript
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    this.ga.trackEvent('Register', 'Submit', 'Register Button', 1);
+
+```
+
+### to disable GA while development
+send second parameter of initialize function to false.
+It may be driven from environment.ts file.
+See https://angular.io/guide/build#configuring-application-environments
+```javascript
+    ga.initialize('UA-XXXXXXX-1', environment.production);
+```
+
+Tested on Angular 7

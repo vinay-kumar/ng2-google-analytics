@@ -1,5 +1,5 @@
 # AngularGoogleAnalytics
-## Add Google Analytics to your Angular or Ionic App
+## Add Google Analytics to your Angular2+ or Ionic2+ projects
 
 1. Easy installation
 2. Angular 2+ and Ionic 2+ compatible
