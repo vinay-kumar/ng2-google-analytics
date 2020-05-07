@@ -6,6 +6,8 @@
 3. Track traditional Ionic 2 Pages with no URL Change (use setPage(pageName) function )
 4. Track Custom Events with trackEvent function
 
+## to build the library
+ng build angular-google-analytics
 
 ## steps to integrate
 
