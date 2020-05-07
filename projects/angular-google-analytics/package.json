@@ -1,0 +1,14 @@
+{
+  "name": "angular-google-analytics",
+  "version": "0.0.1",
+  "author": {
+    "name": "Vinay Kumar",
+    "email": "kumarvinay5.com@gmail.com",
+    "url": "https://kumarvinay.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  }
+}

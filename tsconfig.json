@@ -17,6 +17,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-google-analytics": [
+        "dist/angular-google-analytics",
+        "dist/angular-google-analytics"
+      ],
+      "angular-google-analytics/*": [
+        "dist/angular-google-analytics/*",
+        "dist/angular-google-analytics/*"
+      ]
+    }
   }
 }
