@@ -1,4 +1,4 @@
-# AngularGoogleAnalytics
+# Ng2GoogleAnalytics
 ## Add Google Analytics to your Angular2+ or Ionic2+ projects
 
 1. Easy installation
@@ -7,29 +7,29 @@
 4. Track Custom Events with trackEvent function
 
 ## to build the library
-ng build angular-google-analytics
+ng build ng2-google-analytics
 
 ## steps to integrate
 
-### Add AngularGoogleAnalytics in app.module.ts
+### Add Ng2GoogleAnalytics in app.module.ts
 
 ```javascript
 imports: [
    ...,
    ...,
-   AngularGoogleAnalyticsModule
+   Ng2GoogleAnalyticsModule
   ],
 ```
 
-### initialize AngularGoogleAnalytics
+### initialize Ng2GoogleAnalytics
 
 ```javascript
-// add AngularGoogleAnalyticsService in app.component.ts
-import {AngularGoogleAnalyticsService} from 'angular-google-analytics';
+// add Ng2GoogleAnalyticsService in app.component.ts
+import {Ng2GoogleAnalyticsService} from 'ng2-google-analytics';
 
 // add in constructor
 constructor(
-    public ga: AngularGoogleAnalyticsService
+    public ga: Ng2GoogleAnalyticsService
     ...
   ) {
     //initialize service with your GA Token
@@ -42,7 +42,7 @@ constructor(
 ```javascript
 // add in constructor
 constructor(
-    public ga: AngularGoogleAnalyticsService
+    public ga: Ng2GoogleAnalyticsService
     ...
   ) {
   }

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-angular-google-analytics',
+  selector: 'lib-ng2-google-analytics',
   template: `
     <p>
-      angular-google-analytics works!
+      ng2-google-analytics works!
     </p>
   `,
   styles: []
 })
-export class AngularGoogleAnalyticsComponent implements OnInit {
+export class Ng2GoogleAnalyticsComponent implements OnInit {
 
   constructor() { }
 

@@ -19,13 +19,13 @@
       "dom"
     ],
     "paths": {
-      "angular-google-analytics": [
-        "dist/angular-google-analytics",
-        "dist/angular-google-analytics"
+      "ng2-google-analytics": [
+        "dist/ng2-google-analytics",
+        "dist/ng2-google-analytics"
       ],
-      "angular-google-analytics/*": [
-        "dist/angular-google-analytics/*",
-        "dist/angular-google-analytics/*"
+      "ng2-google-analytics/*": [
+        "dist/ng2-google-analytics/*",
+        "dist/ng2-google-analytics/*"
       ]
     }
   }

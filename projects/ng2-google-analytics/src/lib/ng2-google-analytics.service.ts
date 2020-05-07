@@ -4,7 +4,7 @@ declare var ga: Function;
 @Injectable({
   providedIn: 'root'
 })
-export class AngularGoogleAnalyticsService {
+export class Ng2GoogleAnalyticsService {
   public trackerId: string;
   public isProd: boolean = true;
   constructor() {

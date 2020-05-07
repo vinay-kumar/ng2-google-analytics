@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/angular-google-analytics",
+  "dest": "../../dist/ng2-google-analytics",
   "lib": {
     "entryFile": "src/public-api.ts"
   }
