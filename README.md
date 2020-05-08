@@ -87,6 +87,7 @@ See https://angular.io/guide/build#configuring-application-environments
 ### set additional tracker ID
 Sometimes you need to set more than one tracking ID with your project.
 This can be done with `setAdditionalTraker` function.
+See https://developers.google.com/analytics/devguides/collection/analyticsjs/creating-trackers#working_with_multiple_trackers
 
 ```javascript
   //call this function to set additional tracker
