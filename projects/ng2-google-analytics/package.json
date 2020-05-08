@@ -1,6 +1,6 @@
 {
   "name": "ng2-google-analytics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Vinay Kumar",
     "email": "kumarvinay5.com@gmail.com",
@@ -17,8 +17,8 @@
     "Angular Google Analytics"
   ],
   "peerDependencies": {
-    "@angular/common": "2.0.0 - 5.2.11",
-    "@angular/core": "2.0.0 - 5.2.11"
+    "@angular/common": "6.0.0 - 10.0.0",
+    "@angular/core": "6.0.0 - 10.0.0"
   },
   "repository": {
     "type": "git",
