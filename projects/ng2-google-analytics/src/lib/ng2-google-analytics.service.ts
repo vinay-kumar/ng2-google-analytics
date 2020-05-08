@@ -26,7 +26,9 @@ export class GAEventOptions {
 }
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class Ng2GoogleAnalyticsService {
   public trackerId: string;
   public isProd: boolean = true;

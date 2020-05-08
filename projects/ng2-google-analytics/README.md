@@ -1,7 +1,9 @@
 # Ng2GoogleAnalytics
 ## Add Google Analytics to your Angular2+ or Ionic2+ projects
-Tested on Angular 2 - 5
-For Angular 6+ projects use version 1.0.0
+version 1.0.0
+Tested on Angular 6+
+
+For Angular 2 - 5 projects use version 0.2.0
 
 1. Easy installation
 2. Angular 2+ and Ionic 2+ compatible
