@@ -1,6 +1,9 @@
 # Ng2GoogleAnalytics
 ## Add Google Analytics to your Angular2+ or Ionic2+ projects
 
+Tested on Angular 2 - 5
+For Angular 6+ projects use version 1.0.0
+
 1. Easy installation
 2. Angular 2+ and Ionic 2+ compatible
 3. Track traditional Ionic 2 Pages with no URL Change (use setPage(pageName) function )
@@ -105,4 +108,3 @@ See https://developers.google.com/analytics/devguides/collection/analyticsjs/cre
   }, 'myCustomTrackingName');
 ```
 
-Tested on Angular 7
