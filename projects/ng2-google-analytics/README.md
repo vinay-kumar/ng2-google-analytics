@@ -108,4 +108,12 @@ See https://developers.google.com/analytics/devguides/collection/analyticsjs/cre
   }, 'myCustomTrackingName');
 ```
 
+### set additional tracker ID
+Set auto tracking of pages
+This can be done with `setAutoMode` function.
+```javascript
+  //call this function in app.component.ts
+  //right after initialize function.
+  ga.setAutoMode();
+```
 Tested on Angular 7

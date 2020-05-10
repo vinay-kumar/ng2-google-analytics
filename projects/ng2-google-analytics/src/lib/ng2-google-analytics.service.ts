@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
 declare var ga: Function;
 
 export class GAEventOptions {
@@ -33,10 +35,11 @@ export class Ng2GoogleAnalyticsService {
   public trackerId: string;
   public isProd: boolean = true;
   public additionalTrackers = {};
-
+  private router: Router;
   private scriptAdded: boolean = false;
 
-  constructor() {
+  constructor(router: Router) {
+    this.router = router;
   }
 
   private addGaScript() {
@@ -55,7 +58,6 @@ export class Ng2GoogleAnalyticsService {
         ga('create', '` + this.trackerId + `', 'auto');
       `;
       document.head.appendChild(script);
-      ga('create', this.trackerId);
       this.scriptAdded = true;
     } catch (error) {
       console.error('ga script add', error);
@@ -88,6 +90,19 @@ export class Ng2GoogleAnalyticsService {
     } else {
       this.addGaScript();
     }
+  }
+
+  /**
+   * Set Auto Tracking of Pages using Router Navigation End.
+   * Only available in version 1.x.x +
+   */
+  setAutoMode() {
+    this.router.events.subscribe(ev => {
+      if (ev instanceof NavigationEnd) {
+        ga('set', 'page', ev.url);
+        ga('send', 'pageview');
+      }
+    });
   }
 
   /**
