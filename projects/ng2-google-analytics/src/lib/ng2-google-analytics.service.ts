@@ -97,6 +97,9 @@ export class Ng2GoogleAnalyticsService {
    * Only available in version 1.x.x +
    */
   setAutoMode() {
+    if (!this.isProd && !this.trackerId) {
+      return;
+    }
     this.router.events.subscribe(ev => {
       if (ev instanceof NavigationEnd) {
         ga('set', 'page', ev.url);
@@ -112,7 +115,7 @@ export class Ng2GoogleAnalyticsService {
    * @param pageName Name of the page r.g. Register or register.html
    */
   setPage(pageName: string, trackerName: string = null) {
-    if (!this.isProd) {
+    if (!this.isProd && !this.trackerId) {
       return;
     }
     try {
@@ -134,7 +137,7 @@ export class Ng2GoogleAnalyticsService {
    * @param trackerName optional, to send event to different tracker
    */
   trackEventV2(eventParams: GAEventOptions, trackerName: string = null) {
-    if (!this.isProd) {
+    if (!this.isProd && !this.trackerId) {
       return;
     }
     try {
@@ -153,7 +156,7 @@ export class Ng2GoogleAnalyticsService {
    * @deprecated will be removed in next major version
    */
   trackEvent(eventCategory: string, eventAction: string, eventLabel: string = null, eventValue: number = 0) {
-    if (!this.isProd) {
+    if (!this.isProd && !this.trackerId) {
       return;
     }
     let eventObj = {
